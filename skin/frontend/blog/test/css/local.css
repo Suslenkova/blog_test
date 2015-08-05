@@ -1,0 +1,26 @@
+@import url('bootstrap.css');
+@import url('bootstrap-theme.css');
+
+.main{
+    margin-top: 40px;
+}
+.blog-login-error{
+    float: left;
+    width: 100%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    text-align: center;
+    color: #FA787E;
+}
+
+.blog-form input.ng-invalid.ng-dirty{
+    color:#000;
+}
+
+.blog-form input.ng-valid.ng-dirty{
+    color:#000;
+}
+
+.blog-form div > span{
+    color:#FA787E;
+}

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/1column.phtml</template>
+            </action>
+            <action method="setIsHandle">
+                <applied>1</applied>
+            </action>
+            <action method="setLayoutCode">
+                <name>one_column</name>
+            </action>
+       
+            <!--header-->            
+            <remove name="global_notices"/>
+            <remove name="header"/>
+            <!--IN footer-->
+            <remove name="footer"/>
+            <!--IN before_body_end-->
+            <remove name="global_cookie_notice"/>
+            <!---->
+            <remove name="core_profiler"/>
+            
+        </reference>
+        
+        <reference name="head">
+            <action method="removeItem">
+                <type>skin_css</type>
+                <name>css/styles.css</name>
+            </action>
+            <action method="removeItem">
+                <type>skin_css</type>
+                <name>css/widgets.css</name>
+            </action>
+            
+            
+
+            <!--Angular-->
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/angular/angular.js</name>
+            </action>            
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/angular/angular-cookies.min.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/angular/angular-route.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/angular/angular-resource.js</name>
+            </action>
+            
+            <!--Blog/Test-->
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/blog.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/controllers.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/services.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/authServices.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/directives.js</name>
+            </action>
+            
+            <!--ckEditor-->
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/ckeditor/ckeditor.js</name>
+            </action>
+            <!---->
+            
+            <action method="addCss">
+                <stylesheet>css/local.css</stylesheet>
+            </action>
+        </reference>
+        
+        <reference name="content">
+            <block type="blog_test/list"  name="blog.list"  template="blog.phtml"  />
+        </reference>  
+        
+    </default>
+
+</layout>

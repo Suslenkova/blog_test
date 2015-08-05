@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Blog_Test>
+            <version>0.0.1</version>
+        </Blog_Test>
+    </modules>
+    <global>
+        <models>
+            <blog_test>
+                <class>Blog_Test_Model</class>
+                <resourceModel>blog_test_resource</resourceModel>
+            </blog_test>
+            <blog_test_resource>
+                <class>Blog_Test_Model_Resource</class>
+                <entities>
+                    <table_posts>
+                        <table>blog_test_posts</table>
+                    </table_posts>
+                    <table_users>
+                        <table>blog_test_users</table>
+                    </table_users>
+                </entities>
+            </blog_test_resource>
+        </models>
+        <resources>
+            <blog_test_setup>
+                <setup>
+                    <module>Blog_Test</module>
+                </setup>
+            </blog_test_setup>
+        </resources>
+        <blocks>
+            <blog_test>
+                <class>Blog_Test_Block</class>
+            </blog_test>
+        </blocks>
+        <helpers>
+            <blog_test>
+                <class>Blog_Test_Helper</class>
+            </blog_test>
+        </helpers>
+    </global>
+    <frontend>
+        <routers>
+            <blog_test><!--router-->
+                <use>standard</use>
+                <args>
+                    <module>Blog_Test</module>
+                    <frontName>blog</frontName>
+                </args>
+            </blog_test>
+        </routers>
+    </frontend>
+
+  
+</config>

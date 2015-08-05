@@ -1,0 +1,48 @@
+<div class="container">
+
+<!--    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a id="logout" href="#/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>-->
+
+    <div class="main">
+        <p>ID: {{currentPost.id}}</p>
+        <p>Created: {{currentPost.created}}</p>
+        <div class="container panel">
+            <h2 class="panel-heading">Edit Post</h2>
+
+            <form  class="form" name="editForm" >
+                <fieldset class="form-group">
+                    <a href="#/list" class="btn btn-default">Back</a>                   
+                    <button type="submit" class="btn btn-default" ng-click="deletePost()">Delete</button>
+                    <button type="submit" class="btn btn-default" ng-click="resetData()">Reset</button>                    
+                </fieldset>
+
+
+
+
+                <div class="form-group">
+                    <label for="input" class="control-label" >Title</label>
+                    <input type="text" class="form-control" id="input"  ng-model="currentPost.title" required>
+                </div>
+
+                <div class="form-group" >
+                    <label for="editor" class="control-label">Description</label>
+                    <textarea class="form-control ck-editor" id="editor"  ng-model="currentPost.description"   required ></textarea>
+                </div>
+                <div class="form-actions">
+                    <input type="button"  ng-click="editPost()" class="btn btn-default" value="Edit"/>                
+                </div>
+            </form>
+        </div>
+    </div>  
+</div>  

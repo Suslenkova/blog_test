@@ -1,0 +1,60 @@
+<div class="container">
+<!--    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a id="logout" href="#/login">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>-->
+    <div class="main">
+        <div class="container panel">
+            <h2 class="panel-heading">Registration</h2>
+
+            <form class="form-horizontal blog-form" name="regForm" novalidate>
+                <div class="blog-login-error">{{error}}</div>
+
+                <div class="form-group row">
+                    <label for="input1" class="col-sm-2 control-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="input1" name="uname" ng-model="userData.name" placeholder="Name" uname required>
+                    </div>
+                    <div class="col-sm-offset-2 col-sm-10" ng-show="regForm.uname.$dirty && regForm.uname.$invalid">
+                        <span ng-show="regForm.uname.$error.required">This field is required</span>
+                        <span ng-show="regForm.uname.$error.uname">Incorrect name</span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="input2" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="input2" name="password" ng-model="userData.password" placeholder="Password" pw required>
+                    </div>
+                    <div class="col-sm-offset-2 col-sm-10" ng-show="regForm.password.$dirty && regForm.password.$invalid">
+                        <span ng-show="regForm.password.$error.required">This field is required</span>
+                        <span ng-show="regForm.password.$error.pw">Incorrect password</span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="input3" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="input3" name="email" ng-model="userData.email" placeholder="Email" email required>
+                    </div>
+                    <div class="col-sm-offset-2 col-sm-10" ng-show="regForm.email.$dirty && regForm.email.$invalid">
+                        <span ng-show="regForm.email.$error.required">This field is required</span>
+                        <span ng-show="regForm.email.$error.email">Incorrect email</span>
+                    </div>
+                </div>
+                <div class="form-actions row">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <input type="button"  ng-click="submit()" ng-disabled="regForm.$invalid" class="btn btn-default" value="Registration"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+
+<div class="container">
+<!--    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a id="logout" href="#/registry">Registration</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>-->
+    <div class="main">
+        <div class="container panel">
+            <h2 class="panel-heading">Login</h2>
+
+            <form  class="form-horizontal blog-form" name="loginForm" novalidate>
+                <div class="blog-login-error">{{error}}</div>
+                <div class="form-group row">
+                    <label for="input1" class="col-sm-1 control-label">Username:</label>
+                    <div class="col-sm-11">
+                        <input type="text" class="form-control" id="input1" name="uname" ng-model="userData.name" uname required>
+                    </div>
+                    <div class="col-sm-offset-1 col-sm-11" ng-show="loginForm.uname.$dirty && loginForm.uname.$invalid">
+                        <span ng-show="loginForm.uname.$error.required">This field is required</span>
+                        <span ng-show="loginForm.uname.$error.uname">Incorrect name</span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="input2" class="col-sm-1 control-label">Password:</label>
+                    <div class="col-sm-11">
+                        <input type="password" class="form-control" id="input2" name="password"  ng-model="userData.password"  pw required>
+                    </div>
+                    <div class="col-sm-offset-1 col-sm-11" ng-show="loginForm.password.$dirty && loginForm.password.$invalid">
+                        <span ng-show="loginForm.password.$error.required">This field is required</span>
+                        <span ng-show="loginForm.password.$error.pw">Incorrect password</span>
+                    </div>
+                </div>
+                <div class="form-actions row">
+                    <div class="col-sm-offset-1 col-sm-11">
+                        <input type="button"  ng-click="submit()"  ng-disabled="loginForm.$invalid" class="btn btn-default" value="Sign in"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

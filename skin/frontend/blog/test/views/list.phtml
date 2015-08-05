@@ -1,0 +1,57 @@
+
+<div class="container">
+
+<!--    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a id="logout" href="#/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>-->
+
+    <div class="main">
+        <div class="container panel">
+            <div class="panel-heading">
+                <h2>{{pageHeader}}</h2>
+                <h4>Hello, {{username}}</h4>
+            </div>
+            <div class="tools pull-left">           
+                <!--Количество id в массиве checkedPosts: {{checkedPosts.length}}-->
+                <button ng-click="deletePosts()" class="btn btn-default" ng-show="checkedPosts.length >=1 ">Delete Posts</button>  
+                <a href="#/new" class="btn btn-default">Add New Post</a>
+
+            </div>
+
+            <div class="filter tools pull-right">
+                <input ng-model="str" class="search-query"/>
+            </div>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th ng-repeat="th in tHeaders">{{th.title}} </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="post in posts | filter:str" ng-click="check($event)" > 
+                        <td><input type="checkbox"  /></td>
+                        <td>{{post.title}}</td>
+                        <td>{{post.created}}</td>
+                        <td >
+                            <a href="#/edit/{{post.id}}" class="btn">Edit</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
