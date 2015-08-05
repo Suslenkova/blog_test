@@ -2,7 +2,7 @@
 This is test blog.
 During installation of the module, in the DB automatically creating two tables: blog_test_posts and blog_test_users.
 Applcation incorporates basic CRUD operations for the posts records; user authorization and user registration.
-This application is available at http://magentostore.com/blog/test/edit. Only for registered and authorized users.
+This application is available at http://[store.com]/blog/test/edit. Only for registered and authorized users.
 
 Installation:
 
