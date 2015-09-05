@@ -9,5 +9,5 @@ Installation:
 1. Upload 'blog' folder in to magento root directory
 2. Set the theme module (in Admin Panel): System->Confguration->Design. Package->Current package name =  blog
 Themes->default = test
-4.Refresh magento cache
-5. Load browser (http://[store.com]/blog/test/edit). Make sure of appropriate database updates.
+3.Refresh magento cache
+4. Load browser (http://[store.com]/blog/test/edit). Make sure of appropriate database updates.
